@@ -17,10 +17,7 @@ firebase.initializeApp({
   appId: "1:170211165412:web:ff54a919a8d23622ab58f1"
 })
 
-firebase.auth().signInAnonymously().catch(function(error) {
-  let errorCode = error.code;
-  let errorMessage = error.message;
-});
+firebase.auth().signInAnonymously();
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
